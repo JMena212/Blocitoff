@@ -10,7 +10,7 @@ Rails.application.configure do
   config.eager_load = false
 
   #User sign up confirmation
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: '$IP', port: $PORT }
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
