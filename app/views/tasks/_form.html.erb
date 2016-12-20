@@ -1,0 +1,18 @@
+<h1>New Task</h1>
+ 
+ <div class="row">
+   <div class="col-md-4">
+     <p>A Goal without a plan is just a wish</p>
+     </ul>
+   </div>
+   <div class="col-md-8">
+     <%= form_for @task do |f| %>
+       <div class="form-group">
+         <%= f.label :name %>
+         <%= f.text_field :name, class: 'form-control', placeholder: "Enter your task" %>
+       </div>
+       
+       <%= f.submit "Save", class: 'btn btn-success' %>
+     <% end %>
+   </div>
+  
