@@ -1,23 +1,20 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
-
-
  <h1>Tasks</h1>
- 
+
  <div class="row">
    <div class="col-md-8">
- <!-- #7 -->
-     <% @task.each do |task| %>
+   <%= link_to 'Add task', new_task_path %>
+     <% @tasks.each do |task| %>
        <div class="media">
          <div class="media-body">
            <h4 class="media-heading">
- <!-- #8 -->
-             <%= link_to task.name, task %>
+            <%= task.body %>
+            <%= form_for task do |f| %>
+              <%= f.check_box :completed %>
+              <%= f.label :completed %>
+              <%= f.submit %>
+            <% end %>
            </h4>
-           <small>
-             <%= task.description %>
-           </small>
          </div>
        </div>
      <% end %>
-  
+
