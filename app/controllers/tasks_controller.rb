@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+ 
+ 
   def index
     @tasks = current_user.tasks
   end
@@ -35,12 +37,11 @@ class TasksController < ApplicationController
     end
     redirect_to root_path
   end
-  
+ 
   private
   
   def task_params
-    params.require(:task).permit(:body, :completed)
-  end
-  
-  
+      params.require(:task).permit(:body, :completed)
+  end 
+
 end
