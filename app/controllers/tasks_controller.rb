@@ -13,8 +13,11 @@ class TasksController < ApplicationController
       @task = current_user.tasks.new(task_params)
       if @task.save
            # #20
+      respond_to do |format|
+         format.html {redirect_to root_path}
+         format.js
        flash[:notice] = "Task was saved successfully."
-       redirect_to root_path
+      end
       else
        flash.now[:alert] = "Error creating task. Please try again."
        render :new

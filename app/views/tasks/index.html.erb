@@ -2,7 +2,7 @@
  
  <div class="row">
    <div class="col-md-8">
-   <%= link_to 'Add Task', new_task_path %>
+   <%= link_to 'Add Task', new_task_path, id: "new_link", remote: true %>
      <% @tasks.each do |task| %>
        <div class="media">
          <div class="media-body">
