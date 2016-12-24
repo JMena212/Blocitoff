@@ -1,0 +1,12 @@
+<div class="media">
+ <div class="media-body">
+   <h4 class="media-heading">
+       <%= task.body %>
+       <%= form_for task do |f| %>
+         <%= f.check_box :completed %>
+         <%= f.label :completed %>
+         <%= f.submit "update" %>
+       <%end%>
+   </h4>
+ </div>
+</div>

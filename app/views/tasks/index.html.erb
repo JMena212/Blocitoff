@@ -1,21 +1,10 @@
  <h1>Tasks</h1>
- 
- <div class="row">
-   <div class="col-md-8">
+
+<div class="row">
+ <div class="col-md-8">
    <%= link_to 'Add Task', new_task_path, id: "new_link", remote: true %>
-     <% @tasks.each do |task| %>
-       <div class="media">
-         <div class="media-body">
-           <h4 class="media-heading">
-           <%= task.body %>
-           <%= form_for task do |f| %>
-           <%= f.check_box :completed %>
-           <%= f.label :completed %>
-           <%= f. submit "update" %>
-           <%end%>
-           </h4>
-           
-         </div>
-       </div>
-     <% end %>
-   
+   <div class="tasks">
+    <%= render @tasks%>
+   </div>
+ </div>
+</div>
