@@ -1,11 +1,11 @@
 <div class="media">
  <div class="media-body">
    <h4 class="media-heading">
-       <%= task.body %>
+     <h2>  <%= task.body %> </h2>
+     <h4>Time remaining <%= distance_of_time_in_words(task.created_at, Time.now) %>   </h4>
        <%= form_for task do |f| %>
-         <%= f.check_box :completed %>
+         <%= f.check_box :completed, onchange: 'this.form.submit()' %>
          <%= f.label :completed %>
-         <%= f.submit "update" %>
        <%end%>
    </h4>
  </div>
