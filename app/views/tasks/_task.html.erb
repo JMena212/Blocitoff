@@ -3,10 +3,13 @@
    <h4 class="media-heading">
      <h2>  <%= task.body %> </h2>
      <h4>Time remaining <%= distance_of_time_in_words(task.created_at, Time.now) %>   </h4>
+     
        <%= form_for task do |f| %>
          <%= f.check_box :completed, onchange: 'this.form.submit()' %>
          <%= f.label :completed %>
        <%end%>
+       
+       <%= link_to "Delete Task", @task, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this task?' } %>
    </h4>
  </div>
 </div>
