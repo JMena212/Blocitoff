@@ -38,7 +38,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     if @task.destroy
       flash[:notice] = "Task Removed"
-      redirect_to tasks_path
+      redirect_to root_path
     else
       flash[:alert] = "Task not removed"
       render :show
