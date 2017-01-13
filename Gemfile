@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#Ruby version
+ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
@@ -12,6 +14,7 @@ gem 'devise'
 
 #Figaro safe authentication
 gem 'figaro'
+
 
 
 
@@ -64,4 +67,5 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
